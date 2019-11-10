@@ -48,14 +48,14 @@ public class CountriesControllerTest extends TestCase {
     }
 
     @Test
-    public void testGetCountryByNameInUpperCaseCaseHttpStatusOk() {
+    public void testGetCountryByNameInUpperCaseHttpStatusOk() {
         ResponseEntity<Country> responseEntity = controller.getCountry("ALBANIA");
 
         assertEquals(responseEntity.getStatusCodeValue(), 200);
     }
 
     @Test
-    public void testGetCountryByNameInRandomCaseCaseHttpStatusOk() {
+    public void testGetCountryByNameInRandomCaseHttpStatusOk() {
         ResponseEntity<Country> responseEntity = controller.getCountry("AlBanIa");
 
         assertEquals(responseEntity.getStatusCodeValue(), 200);
