@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+         <!--JDBC Database connection settings-->
+        <property name="hibernate.archive.autodetection">class,hbm</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:mem:country_db;sql.syntax_mys=true</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="connection.pool_size">10</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!--<property name="hbm2ddl.auto">validate</property>-->
+
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Country"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Translation"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Domain"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Currency"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Language"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.RegionalBloc"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.OtherAcronym"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.OtherName"></mapping>
+        <mapping class="main.com.test.task.aleshin.dmitriy.countries.model.Latlng"></mapping>
+    </session-factory>
+</hibernate-configuration>
