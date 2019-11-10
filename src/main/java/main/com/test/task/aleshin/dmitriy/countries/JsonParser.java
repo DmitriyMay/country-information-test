@@ -161,27 +161,27 @@ public class JsonParser {
     private List<Domain> getParsingListDomains(Object jsonObject) {
         JSONArray jsonArray = (JSONArray) jsonObject;
 
-        List<Domain> arr = new ArrayList<>(jsonArray.size());
+        List<Domain> domains = new ArrayList<>(jsonArray.size());
 
         for (Object aJsonArray : jsonArray) {
             Domain domain = new Domain();
             domain.setDefinition((String) aJsonArray);
-            arr.add(domain);
+            domains.add(domain);
         }
-        return arr;
+        return domains;
     }
 
     private List<Latlng> getParsingListLatlngs(Object jsonObject) {
         JSONArray jsonArray = (JSONArray) jsonObject;
 
-        List<Latlng> arr = new ArrayList<>(jsonArray.size());
+        List<Latlng> latlngs = new ArrayList<>(jsonArray.size());
 
         for (Object aJsonArray : jsonArray) {
             Latlng latlng = new Latlng();
             latlng.setLatlng((double) aJsonArray);
-            arr.add(latlng);
+            latlngs.add(latlng);
         }
-        return arr;
+        return latlngs;
     }
 
     private Translation getParsingTranslation(JSONObject jsonObject) {
